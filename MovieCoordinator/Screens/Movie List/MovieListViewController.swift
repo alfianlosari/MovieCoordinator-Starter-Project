@@ -11,7 +11,15 @@ import UIKit
 class MovieListViewController: UICollectionViewController {
     
     var movies: [Movie] = Movie.dummyMovies
-
+    
+    init() {
+        super.init(collectionViewLayout: UICollectionViewFlowLayout())
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(collectionViewLayout: UICollectionViewFlowLayout())
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
