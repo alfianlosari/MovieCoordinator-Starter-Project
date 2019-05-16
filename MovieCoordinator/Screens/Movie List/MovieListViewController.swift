@@ -17,7 +17,7 @@ class MovieListViewController: UICollectionViewController {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(collectionViewLayout: UICollectionViewFlowLayout())
+        super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
@@ -26,6 +26,7 @@ class MovieListViewController: UICollectionViewController {
     }
     
     private func setupCollectionView() {
+        title = "Movies"
         collectionView.register(MovieCollectionViewCell.nib, forCellWithReuseIdentifier: "Cell")
 
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout

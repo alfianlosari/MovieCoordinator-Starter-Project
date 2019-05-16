@@ -22,7 +22,7 @@ class MovieDetailViewController: UITableViewController {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(style: .plain)
+        super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
